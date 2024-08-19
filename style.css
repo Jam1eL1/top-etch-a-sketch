@@ -6,3 +6,15 @@ body {
     margin: 0;
     padding: 0;
 }
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: 600px;
+}
+
+.grid-item {
+    border: 1px solid #8609f4f9;
+    box-sizing: border-box;
+}
