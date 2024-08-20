@@ -1,8 +1,16 @@
 const container = document.querySelector('.grid-container');
-// create divs for 16x16 grid under the  `container`
-// same style applie to each div - hover effect - use event listeners
-// create a diff class with the hover effect styles, and simply 'add' style to the div when hover effect is applied
+const newGridBtn = document.querySelector('.new-grid-btn');
 
+newGridBtn.addEventListener('click', newGridBtnClicked);
+
+function newGridBtnClicked() {
+    const newSize = parseInt(prompt('Please enter a valid grid size'));
+    if (newSize !== NaN && (newSize > 0 && newSize <= 100)) {
+        return createGrid(newSize);
+    } else {
+        alert('Enter a valid input from 1-100');
+    }
+}
 function createGrid(size) {
     container.innerHTML = '';
     const itemSize = 600 / size;
