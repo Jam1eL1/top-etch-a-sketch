@@ -13,6 +13,14 @@ function createGrid(size) {
         gridItem.style.width = `${itemSize}px`;
         gridItem.style.height = `${itemSize}px`;
         container.appendChild(gridItem);
+
+        gridItem.addEventListener("mouseover", function(e) {
+            this.classList.add('hovered');
+        });
+
+        gridItem.addEventListener("mouseout", function(e) {
+            this.classList.remove('hovered');
+        })
     }
 }
 

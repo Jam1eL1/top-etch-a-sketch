@@ -18,3 +18,7 @@ body {
     border: 1px solid #8609f4f9;
     box-sizing: border-box;
 }
+
+.hovered {
+    background-color: #f4f409;
+}
