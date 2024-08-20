@@ -14,14 +14,24 @@ function createGrid(size) {
         gridItem.style.height = `${itemSize}px`;
         container.appendChild(gridItem);
 
-        gridItem.addEventListener("mouseover", function(e) {
-            this.classList.add('hovered');
+        gridItem.addEventListener('mouseover', function(e) {
+            const randomColor = generateRandomColor();
+            this.style.backgroundColor = randomColor;
         });
 
-        gridItem.addEventListener("mouseout", function(e) {
-            this.classList.remove('hovered');
+        gridItem.addEventListener('mouseout', function(e) {
+            this.style.backgroundColor = '';
         })
     }
+}
+
+function generateRandomColor() {
+    const letters = '0123456789ABCDEF';
+    let color = "#";
+    for (let i = 0; i < 6; i++) {
+        color += letters[Math.floor(Math.random()*16)];
+    }
+    return color;
 }
 
 createGrid(16);
