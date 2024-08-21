@@ -1,10 +1,15 @@
 body {
-    font-family: Arial, sans-serif; /* Default font family */
-    font-size: 16px; /* Default font size */
-    line-height: 1.5; /* Line height for better readability */
-    color: #333; /* Default text color */
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #ffffff;
+    background-color: #0d0d0d;
     margin: 0;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .grid-container {
@@ -12,11 +17,35 @@ body {
     flex-wrap: wrap;
     width: 600px;
     height: 600px;
+    background-color: #2a2a2a;
+    border: 2px solid #ff00ff;
+    box-shadow: 0px 0px 15px #ff00ff;
 }
 
 .grid-item {
-    border: 1px solid #8609f4f9;
+    border: 1px solid #ff00ff;
     box-sizing: border-box;
-    transition: background-color 0.5s ease; 
+    transition: background-color 0.5s ease, box-shadow 0.5s ease;
 }
 
+.grid-item:hover {
+    box-shadow: 0px 0px 10px #ff00ff;
+}
+
+.new-grid-btn {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #ff00ff;
+    border: 2px solid #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.new-grid-btn:hover {
+    background-color: #ffffff;
+    color: #ff00ff;
+}
